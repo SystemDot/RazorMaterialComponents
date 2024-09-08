@@ -1,0 +1,1 @@
+SystemDot Razor Material Components contains tag helpers to get google material design components into your asp.net core razor pages 
