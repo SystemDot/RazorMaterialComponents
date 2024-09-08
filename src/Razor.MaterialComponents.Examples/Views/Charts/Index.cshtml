@@ -1,0 +1,66 @@
+﻿@model ChartsModel
+@{
+    ChartConfig doughnutChartConfig = BestColoursChartConfigBuilder.Build("doughnut", Model.Labels, Model.Colours, Model.Data);
+    ChartConfig pieChartConfig = BestColoursChartConfigBuilder.Build("pie", Model.Labels, Model.Colours, Model.Data);
+    ChartConfig lineChartConfig = BestColoursChartConfigBuilder.Build("line", Model.Labels, Model.Colours, Model.Data);
+    ChartConfig barChartConfig = BestColoursChartConfigBuilder.Build("bar", Model.Labels, Model.Colours, Model.Data);
+}
+<mdc-grid>
+    <mdc-grid-inner>
+        <mdc-grid-cell span=12>
+            <mdc-card>
+                <form asp-controller=@nameof(Charts) method="get">
+                    <mdc-grid>
+                        <mdc-grid-inner>
+                            <mdc-grid-cell span=12>
+                                <mdc-select 
+                                    id="from-month"
+                                    label="Select from month"
+                                    name="From"
+                                    for=@Model.From
+                                    items="@Model.Months">
+                                </mdc-select>
+                            </mdc-grid-cell>
+                            <mdc-grid-cell span=12>
+                                <mdc-select 
+                                    id="to-month"
+                                    label="Select to month"
+                                    name="To"
+                                    for=@Model.To
+                                    items="@Model.Months">
+                                </mdc-select>
+                            </mdc-grid-cell>
+                            <mdc-grid-cell span=12>
+                                <mdc-button
+                                    id="refresh"
+                                    button-type=Raised
+                                    label="Refresh">
+                                </mdc-button>
+                            </mdc-grid-cell>
+                        </mdc-grid-inner>
+                    </mdc-grid>
+                </form>
+            </mdc-card>
+        </mdc-grid-cell>
+        <mdc-grid-cell>
+            <mdc-card>
+                <chartjs-chart id="doughnut" config=@doughnutChartConfig></chartjs-chart>
+            </mdc-card>
+        </mdc-grid-cell>
+        <mdc-grid-cell>
+            <mdc-card>
+                <chartjs-chart id="pie" config=@pieChartConfig></chartjs-chart>
+            </mdc-card>
+        </mdc-grid-cell>
+        <mdc-grid-cell>
+            <mdc-card>
+                <chartjs-chart id="line" config=@lineChartConfig></chartjs-chart>
+            </mdc-card>
+        </mdc-grid-cell>
+        <mdc-grid-cell>
+            <mdc-card>
+                <chartjs-chart id="bar" config=@barChartConfig></chartjs-chart>
+            </mdc-card>
+        </mdc-grid-cell>
+    </mdc-grid-inner>
+</mdc-grid>
