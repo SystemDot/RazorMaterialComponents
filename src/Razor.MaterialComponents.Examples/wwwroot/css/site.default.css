@@ -1,0 +1,44 @@
+/* 
+    This file contains the default site-wide styles  
+*/
+
+.centered-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered-box, .mdc-text-field {
+    margin-top: 1rem;
+}
+
+.centered-box, .mdc-button {
+    margin-top: 1rem;
+}
+
+.mdc-card-wrapper__text-section {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.mdc-card-wrapper__text-section:last-child {
+    padding-bottom: 16px;
+}
+
+.mdc-card__content {
+    padding: 16px;
+}
+
+.mdc-data-table__header-cell {
+    font-weight: bold;
+}
+
+.demo-cell {
+    background: rgba(0, 0, 0, .2);
+    height: 100px;
+}
+
+.text-right {
+    text-align: right;
+}
