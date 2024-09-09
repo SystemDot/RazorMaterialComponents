@@ -11,6 +11,7 @@
         LocalDate,
         Telephone,
         Hidden,
-        Checkbox
+        Checkbox,
+        Radio
     }
 }

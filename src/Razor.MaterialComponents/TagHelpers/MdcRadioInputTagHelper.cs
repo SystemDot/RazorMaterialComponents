@@ -6,18 +6,15 @@ using SystemDot.Web.Razor.MaterialComponents.Generation;
 
 namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
 {
-    [HtmlTargetElement("mdc-checkbox")]
-    public class MdcCheckboxTagHelper : TagHelper
+    [HtmlTargetElement("mdc-radio-input")]
+    public class MdcRadioInputTagHelper : TagHelper
     {
-        public string? Id { get; set; }
-        public string? Label { get; set; }
-        public MdcElementMode Mode { get; set; }
         public ModelExpression? For { get; set; }
-        public bool Touch { get; set; }
+        public string? Value { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            TagBuilder builder = CheckboxGenerator.GenerateCheckbox(Id, Label, Mode, For, Touch);
+            TagBuilder builder = InputGenerator.GenerateRadioButton(For, Value);
             output.TagName = builder.TagName;
             output.MergeAttributes(builder);
             output.PostContent.AppendHtml(builder.InnerHtml);

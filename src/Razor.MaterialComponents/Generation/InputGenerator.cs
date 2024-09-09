@@ -57,6 +57,26 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
             return tagBuilder;
         }
 
+
+        public static TagBuilder GenerateRadioButton(ModelExpression? @for, string? value)
+        {
+            TagBuilder tagBuilder = GenerateInput(MdcFieldType.Radio, ["mdc-radio__native-control"]);
+
+            if (@for is not null)
+            {
+                tagBuilder.Attributes.Add("name", @for!.Name);
+                tagBuilder.Attributes.Add("value", value);
+
+                bool isChecked = @for.Model.ToString() == value;
+                if (isChecked)
+                {
+                    tagBuilder.Attributes.Add("checked", "");
+                }
+            }
+
+            return tagBuilder;
+        }
+
         public static TagBuilder GenerateInput(string? name, string? value, MdcFieldType fieldType, IEnumerable<string> cssClasses, bool required = false)
         {
             TagBuilder inputBuilder = GenerateInput(fieldType, cssClasses);
@@ -114,6 +134,8 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
                     return "tel";
                 case MdcFieldType.Checkbox:
                     return "checkbox";
+                case MdcFieldType.Radio:
+                    return "radio";
                 case MdcFieldType.Hidden:
                     return "hidden";
             }

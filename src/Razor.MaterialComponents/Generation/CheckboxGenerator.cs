@@ -6,19 +6,19 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
 {
     public static class CheckboxGenerator
     {
-        public static TagBuilder GenerateCheckbox(string? id, string? label, MdcElementMode mode, ModelExpression? @for)
+        public static TagBuilder GenerateCheckbox(string? id, string? label, MdcElementMode mode, ModelExpression? @for, bool touch)
         {
             if (mode == MdcElementMode.Exploded)
             {
-                return GenerateCheckboxExploded(id);
+                return GenerateCheckboxExploded(id, touch);
             }
             else
             {
-                return GenerateCheckboxContained(id, label, @for);
+                return GenerateCheckboxContained(id, label, @for, touch);
             }
         }
 
-        private static TagBuilder GenerateCheckboxContained(string? id, string? label, ModelExpression? @for)
+        private static TagBuilder GenerateCheckboxContained(string? id, string? label, ModelExpression? @for, bool touch)
         {
             if (id is null)
             {
@@ -33,7 +33,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
             TagBuilder builder = FieldGenerator.GenerateFormField();
             HtmlContentBuilder content = new HtmlContentBuilder();
 
-            TagBuilder containerBuilder = GenerateCheckboxContainer();
+            TagBuilder containerBuilder = GenerateCheckboxContainer(touch);
             HtmlContentBuilder containerContent = new HtmlContentBuilder();
             
             TagBuilder inputBuilder = InputGenerator.GenerateCheckbox(@for);
@@ -62,9 +62,9 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
             return builder;
         }
 
-        private static TagBuilder GenerateCheckboxExploded(string? id)
+        private static TagBuilder GenerateCheckboxExploded(string? id, bool touch)
         {
-            TagBuilder builder = GenerateCheckboxContainer();
+            TagBuilder builder = GenerateCheckboxContainer(touch);
 
             if (id is not null)
             {
@@ -87,10 +87,12 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
             builder.AddCssClass("mdc-checkbox__mixedmark");
             return builder;
         }
-        private static TagBuilder GenerateCheckboxContainer()
+
+        private static TagBuilder GenerateCheckboxContainer(bool touch)
         {
             var builder = new TagBuilder("div");
             builder.AddCssClass("mdc-checkbox");
+            builder.AddCssClass("mdc-checkbox--touch");
             return builder;
         }
     }

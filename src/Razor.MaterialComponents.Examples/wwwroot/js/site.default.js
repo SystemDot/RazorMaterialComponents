@@ -42,6 +42,13 @@ function hookup_mdc_banners() {
     }
 }
 
+function hookup_mdc_switches() {
+    const switches = document.querySelectorAll('.mdc-switch');
+    for (const switchElment of switches) {
+        mdc.switchControl.MDCSwitch.attachTo(switchElment);
+    }
+}
+
 function hookup_mdc_buttons() {
     const buttons = document.querySelectorAll('.mdc-button');
     for (const button of buttons) {
@@ -81,6 +88,7 @@ function hookup() {
     hookup_charts();
     hookup_mdc_appbar_drawer();
     hookup_mdc_banners();
+    hookup_mdc_switches();
     hookup_mdc_buttons();
     hookup_mdc_tables();
     hookup_mdc_dialogs();

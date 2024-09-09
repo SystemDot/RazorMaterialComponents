@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Newtonsoft.Json.Linq;
 
 namespace SystemDot.Web.Razor.MaterialComponents.Generation {
     public static class ButtonGenerator {
@@ -206,6 +208,38 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation {
             }
 
             builder.InnerHtml.SetHtmlContent(contentBuilder);
+
+            return builder;
+        }
+
+        public static TagBuilder GenerateSwitchButton(string? id, ModelExpression? @for, bool disabled)
+        {
+            var builder = new TagBuilder("button");
+            builder.AddCssClass("mdc-switch");
+            builder.Attributes.Add(id, id);
+            builder.Attributes.Add("role", "switch");
+
+            if (@for is not null)
+            {
+                builder.Attributes.Add("type", "submit");
+                builder.Attributes.Add("name", @for!.Name);
+                
+                bool isOn = (bool)@for.Model;
+                builder.Attributes.Add("value", (!isOn).ToString().ToLower());
+                builder.AddCssClass(isOn ? "mdc-switch--selected" : "mdc-switch--unselected");
+                builder.Attributes.Add("aria-checked", isOn.ToString().ToLower());
+            }
+            else 
+            {
+                builder.Attributes.Add("type", "button");
+                builder.AddCssClass("mdc-switch--unselected");
+                builder.Attributes.Add("aria-checked", "false");
+            }
+
+            if (disabled)
+            {
+                builder.Attributes.Add("disabled", "");
+            }
 
             return builder;
         }

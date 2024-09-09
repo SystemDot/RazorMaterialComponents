@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Html;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SystemDot.Web.Razor.MaterialComponents.Generation
 {
@@ -7,53 +6,83 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
     {
         public static TagBuilder GenerateCheckboxCheckmark()
         {
-            return SvgGenerator.GenerateSvg("mdc-checkbox__checkmark", "0 0 24 24");
+            return GenerateSvg("mdc-checkbox__checkmark", "0 0 24 24");
         }
 
         public static TagBuilder GenerateCheckboxCheckmarkPath()
         {
-            return SvgGenerator.GenerateSvgPath("mdc-checkbox__checkmark-path", "M1.73,12.91 8.1,19.28 22.79,4.59");
+            return GenerateSvgPath("mdc-checkbox__checkmark-path", true, "M1.73,12.91 8.1,19.28 22.79,4.59");
         }
 
         public static TagBuilder GenerateSelectDropdown()
         {
-            return SvgGenerator.GenerateSvg("mdc-select__dropdown-icon-graphic", "7 10 10 5");
+            return GenerateSvg("mdc-select__dropdown-icon-graphic", "7 10 10 5");
         }
 
-        public static IHtmlContent GenerateSelectDropdownInactivePolygon()
+        public static TagBuilder GenerateSwitchOn()
         {
-            return SvgGenerator.GenerateSvgPolygon("mdc-select__dropdown-icon-inactive", "7 10 12 15 17 10");
+            return GenerateSvg("mdc-switch__icon mdc-switch__icon--on", "0 0 24 24");
         }
-        public static IHtmlContent GenerateSelectDropdownActivePolygon()
+
+        public static TagBuilder GenerateSwitchOnPath()
         {
-            return SvgGenerator.GenerateSvgPolygon("mdc-select__dropdown-icon-active", "7 15 12 10 17 15");
+            return GenerateSvgPath("M19.69,5.23L8.96,15.96l-4.23-4.23L2.96,13.5l6,6L21.46,7L19.69,5.23z");
+        }
+
+        public static TagBuilder GenerateSwitchOff()
+        {
+            return GenerateSvg("mdc-switch__icon mdc-switch__icon--off", "0 0 24 24");
+        }
+
+        public static TagBuilder GenerateSwitchOffPath()
+        {
+            return GenerateSvgPath("M20 13H4v-2h16v2z");
+        }
+
+        public static TagBuilder GenerateSelectDropdownInactivePolygon()
+        {
+            return GenerateSvgPolygon("mdc-select__dropdown-icon-inactive", "7 10 12 15 17 10");
+        }
+
+        public static TagBuilder GenerateSelectDropdownActivePolygon()
+        {
+            return GenerateSvgPolygon("mdc-select__dropdown-icon-active", "7 15 12 10 17 15");
         }
 
         public static TagBuilder GenerateSvg(string cssClass, string viewBox)
         {
-            var iconSvgBuilder = new TagBuilder("svg");
-            iconSvgBuilder.AddCssClass(cssClass);
-            iconSvgBuilder.Attributes.Add("viewBox", viewBox);
-            return iconSvgBuilder;
+            var builder = new TagBuilder("svg");
+            builder.AddCssClass(cssClass);
+            builder.Attributes.Add("viewBox", viewBox);
+            return builder;
         }
 
         public static TagBuilder GenerateSvgPolygon(string cssClass, string points)
         {
-            var polygonBuilder = new TagBuilder("polygon");
-            polygonBuilder.AddCssClass(cssClass);
-            polygonBuilder.Attributes.Add("stroke", "none");
-            polygonBuilder.Attributes.Add("fill-rule", "evenodd");
-            polygonBuilder.Attributes.Add("points", points);
-            return polygonBuilder;
+            var builder = new TagBuilder("polygon");
+            builder.AddCssClass(cssClass);
+            builder.Attributes.Add("stroke", "none");
+            builder.Attributes.Add("fill-rule", "evenodd");
+            builder.Attributes.Add("points", points);
+            return builder;
         }
 
-        public static TagBuilder GenerateSvgPath(string cssClass, string points)
+        public static TagBuilder GenerateSvgPath(string cssClass, bool fillNone, string points)
         {
-            var polygonBuilder = new TagBuilder("path");
-            polygonBuilder.AddCssClass(cssClass);
-            polygonBuilder.Attributes.Add("fill", "none");
-            polygonBuilder.Attributes.Add("d", points);
-            return polygonBuilder;
+            var builder = GenerateSvgPath(points);
+            builder.AddCssClass(cssClass);
+            if (fillNone)
+            {
+                builder.Attributes.Add("fill", "none");
+            }
+            return builder;
+        }
+
+        public static TagBuilder GenerateSvgPath(string points)
+        {
+            var builder = new TagBuilder("path");
+            builder.Attributes.Add("d", points);
+            return builder;
         }
     }
 }
