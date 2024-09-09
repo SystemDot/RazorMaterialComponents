@@ -16,4 +16,16 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
             output.PostContent.AppendHtml(builder.InnerHtml);
         }
     }
+
+    [HtmlTargetElement("mdc-elevation-overlay")]
+    public class MdcElevationOverlayTagHelper : TagHelper
+    {
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            TagBuilder builder = OverlayGenerator.GenerateElevationOverlay();
+            output.TagName = builder.TagName;
+            output.MergeAttributes(builder);
+            output.PostContent.AppendHtml(builder.InnerHtml);
+        }
+    }
 }

@@ -7,9 +7,26 @@
                     <mdc-grid-cell span=12>
                         <mdc-typography type="Headline5">Contained</mdc-typography>
                     </mdc-grid-cell>
-                    
+
                     <mdc-grid-cell span=12>
                         <mdc-checkbox id="contained-checkbox-1" for=@Model.CheckboxValue label="Checkbox 1"></mdc-checkbox>
+                    </mdc-grid-cell>
+
+                    <mdc-grid-cell span=12>
+                        <mdc-form-field>
+                            <mdc-radio id="radio-1" for=@Model.RadioValue value="1"></mdc-radio>
+                            <label for="radio-1">Radio 1</label>
+                        </mdc-form-field>
+                        <mdc-form-field>
+                            <mdc-radio id="radio-2" for=@Model.RadioValue value="2"></mdc-radio>
+                            <label for="radio-2">Radio 2</label>
+                        </mdc-form-field>
+                    </mdc-grid-cell>
+
+                    <mdc-grid-cell span=12>
+                        <mdc-form-field>
+                            <mdc-switch id="basic-switch" for=@Model.SwitchValue></mdc-switch>
+                        </mdc-form-field>
                     </mdc-grid-cell>
 
                     <mdc-grid-cell span=12>
@@ -40,6 +57,55 @@
                                 <mdc-checkbox-ripple></mdc-checkbox-ripple>
                             </mdc-checkbox>
                             <label for="exploded-checkbox-1">Checkbox 1</label>
+                        </mdc-form-field>
+                    </mdc-grid-cell>
+
+                    <mdc-grid-cell span=12>
+                        <mdc-form-field>
+                            <mdc-radio mode=Exploded>
+                                <mdc-radio-input id="radio-1" for=@Model.RadioValue value="1"></mdc-radio-input>
+                                <mdc-radio-background>
+                                    <mdc-radio-outer-circle></mdc-radio-outer-circle>
+                                    <mdc-radio-inner-circle></mdc-radio-inner-circle>
+                                </mdc-radio-background>
+                                <mdc-radio-ripple></mdc-radio-ripple>
+                            </mdc-radio>
+                            <label for="radio-1">Radio 1</label>
+                        </mdc-form-field>
+                        <mdc-form-field>
+                            <mdc-radio mode=Exploded>
+                                <mdc-radio-input id="radio-2" for=@Model.RadioValue value="2"></mdc-radio-input>
+                                <mdc-radio-background>
+                                    <mdc-radio-outer-circle></mdc-radio-outer-circle>
+                                    <mdc-radio-inner-circle></mdc-radio-inner-circle>
+                                </mdc-radio-background>
+                                <mdc-radio-ripple></mdc-radio-ripple>
+                            </mdc-radio>
+                            <label for="radio-2">Radio 2</label>
+                        </mdc-form-field>
+                    </mdc-grid-cell>
+
+                    <mdc-grid-cell span=12>
+                        <mdc-form-field>
+                            <mdc-switch id="basic-switch" for=@Model.SwitchValue mode=Exploded>
+                                <mdc-switch-track></mdc-switch-track>
+                                <mdc-switch-handle-track>
+                                    <mdc-switch-handle>
+                                        <mdc-switch-shadow>
+                                            <mdc-elevation-overlay></mdc-elevation-overlay>
+                                        </mdc-switch-shadow>
+                                        <mdc-switch-ripple></mdc-switch-ripple>
+                                        <mdc-switch-icons>
+                                            <mdc-switch-on-svg>
+                                                <mdc-switch-on-svg-path></mdc-switch-on-svg-path>
+                                            </mdc-switch-on-svg>
+                                            <mdc-switch-off-svg>
+                                                <mdc-switch-off-svg-path></mdc-switch-off-svg-path>
+                                            </mdc-switch-off-svg>
+                                        </mdc-switch-icons>
+                                    </mdc-switch-handle>
+                                </mdc-switch-handle-track>
+                            </mdc-switch>
                         </mdc-form-field>
                     </mdc-grid-cell>
 
