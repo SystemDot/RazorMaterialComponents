@@ -40,32 +40,46 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
             return lineRippleBuilder;
         }
 
-        public static IHtmlContent GenerateButtonRipple()
+        public static TagBuilder GenerateButtonRipple()
         {
             var buttonRippleBuilder = new TagBuilder("span");
             buttonRippleBuilder.AddCssClass("mdc-button__ripple");
             return buttonRippleBuilder;
         }
 
-        public static IHtmlContent? GenerateFabRipple()
+        public static TagBuilder GenerateFabRipple()
         {
             var fabRippleBuilder = new TagBuilder("span");
             fabRippleBuilder.AddCssClass("mdc-fab__ripple");
             return fabRippleBuilder;
         }
 
-        public static IHtmlContent? GenerateTabRipple()
+        public static TagBuilder GenerateTabRipple()
         {
             var fabRippleBuilder = new TagBuilder("span");
             fabRippleBuilder.AddCssClass("mdc-tab__ripple");
             return fabRippleBuilder;
         }
 
-        internal static TagBuilder GenerateCheckboxRipple()
+        public static TagBuilder GenerateCheckboxRipple()
         {
-            var fabRippleBuilder = new TagBuilder("div");
-            fabRippleBuilder.AddCssClass("mdc-checkbox__ripple");
-            return fabRippleBuilder;
+            var builder = new TagBuilder("div");
+            builder.AddCssClass("mdc-checkbox__ripple");
+            return builder;
+        }
+
+        public static TagBuilder GenerateRadioButtonRipple()
+        {
+            var builder = new TagBuilder("div");
+            builder.AddCssClass("mdc-radio__ripple");
+            return builder;
+        }
+
+        public static TagBuilder GenerateSwitchRipple()
+        {
+            var builder = new TagBuilder("div");
+            builder.AddCssClass("mdc-switch__ripple");
+            return builder;
         }
     }
 }
