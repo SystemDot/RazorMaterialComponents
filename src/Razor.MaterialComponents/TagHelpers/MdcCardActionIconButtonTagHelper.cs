@@ -8,7 +8,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers;
 [HtmlTargetElement("mdc-card-action-icon-button")]
 public class MdcCardActionIconButtonTagHelper : TagHelper
 {
-    public required string Id { get; set; }
+    public string Id { get; set; }
     public string? Title { get; set; }
     public bool Ripple { get; set; }
     public bool Touch { get; set; }

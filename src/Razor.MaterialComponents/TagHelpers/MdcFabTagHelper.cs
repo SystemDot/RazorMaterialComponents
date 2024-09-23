@@ -8,10 +8,10 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
     [HtmlTargetElement("mdc-fab")]
     public class MdcFabTagHelper : TagHelper
     {
-        public required string Id { get; set; }
+        public string Id { get; set; }
         public MdcFabType FabType { get; set; }
-        public required string Icon { get; set; }
-        public required string Label { get; set; }
+        public string Icon { get; set; }
+        public string Label { get; set; }
         public bool Touch { get; set; }
         public bool Disabled { get; set; }
 

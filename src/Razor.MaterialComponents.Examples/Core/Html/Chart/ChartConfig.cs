@@ -2,7 +2,7 @@
 {
     public record ChartConfig
     {
-        public required string Type { get; init; }
-        public required ChartData Data { get; init; }
+        public string Type { get; init; }
+        public ChartData Data { get; init; }
     }
 }

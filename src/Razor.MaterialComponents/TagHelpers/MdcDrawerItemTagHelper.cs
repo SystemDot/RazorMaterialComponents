@@ -8,8 +8,8 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
     [HtmlTargetElement("mdc-drawer-item")]
     public class MdcDrawerItemTagHelper : TagHelper
     {
-        public required string Id { get; set; }
-        public required string Href { get; set; }
+        public string Id { get; set; }
+        public string Href { get; set; }
         public string? Text { get; set; }
         public string? Icon { get; set; }
         public bool Selected { get; set; }

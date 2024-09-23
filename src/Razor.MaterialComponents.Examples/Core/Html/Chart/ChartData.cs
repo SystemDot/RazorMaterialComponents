@@ -3,6 +3,6 @@
     public record ChartData
     {
         public IEnumerable<string>? Labels { get; init; }
-        public required IEnumerable<ChartDataset> Datasets { get; init; }
+        public IEnumerable<ChartDataset> Datasets { get; init; }
     }
 }

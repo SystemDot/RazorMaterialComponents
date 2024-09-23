@@ -9,8 +9,8 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
     [HtmlTargetElement("mdc-select")]
     public class MdcSelectTagHelper : TagHelper
     {
-        public required string Id { get; set; }
-        public required string Label { get; set; }
+        public string Id { get; set; }
+        public string Label { get; set; }
         public string? Name { get; set; }
         public string? Value { get; set; }
         public ModelExpression? For { get; set; }

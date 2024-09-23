@@ -8,9 +8,9 @@
     [HtmlTargetElement("chartjs-chart")]
     public class ChartJsChartTagHelper : TagHelper
     {
-        public required string Id { get; set; }
+        public string Id { get; set; }
         
-        public required ChartConfig Config { get; set; }
+        public ChartConfig Config { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

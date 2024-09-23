@@ -8,7 +8,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers
     [HtmlTargetElement("mdc-button")]
     public class MdcButtonTagHelper : TagHelper
     {
-        public required string Id { get; set; }
+        public string Id { get; set; }
         public string? Label { get; set; }
         public MdcButtonType ButtonType { get; set; }
         public MdcIconType IconType { get; set; }

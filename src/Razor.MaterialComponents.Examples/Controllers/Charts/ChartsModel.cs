@@ -5,11 +5,11 @@
 
     public record ChartsModel : MenuModel
     {
-        public required IEnumerable<int> Data { get; init; }
-        public required IEnumerable<string> Labels { get; init; }
-        public required IEnumerable<string> Colours { get; init; }
-        public required IEnumerable<SelectListItem> Months { get; init; }
-        public required string From { get; init; }
-        public required string To { get; init; }
+        public IEnumerable<int> Data { get; init; }
+        public IEnumerable<string> Labels { get; init; }
+        public IEnumerable<string> Colours { get; init; }
+        public IEnumerable<SelectListItem> Months { get; init; }
+        public string From { get; init; }
+        public string To { get; init; }
     }
 }

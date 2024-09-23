@@ -2,8 +2,8 @@
 {
     public record ColourData
     {
-        public required Colour Colour { get; init; }
-        public required Month Month { get; init; }
-        public required int Value { get; init; }
+        public Colour Colour { get; init; }
+        public Month Month { get; init; }
+        public int Value { get; init; }
     }
 }

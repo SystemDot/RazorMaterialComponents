@@ -40,7 +40,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
 
         public static TagBuilder GenerateCheckbox(ModelExpression? @for)
         {
-            TagBuilder tagBuilder = GenerateInput(MdcFieldType.Checkbox, ["mdc-checkbox__native-control"]);
+            TagBuilder tagBuilder = GenerateInput(MdcFieldType.Checkbox, new [] { "mdc-checkbox__native-control" });
 
             if (@for is not null)
             {
@@ -60,7 +60,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.Generation
 
         public static TagBuilder GenerateRadioButton(ModelExpression? @for, string? value)
         {
-            TagBuilder tagBuilder = GenerateInput(MdcFieldType.Radio, ["mdc-radio__native-control"]);
+            TagBuilder tagBuilder = GenerateInput(MdcFieldType.Radio, new[] { "mdc-radio__native-control" });
 
             if (@for is not null)
             {

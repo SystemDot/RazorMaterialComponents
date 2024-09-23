@@ -8,7 +8,7 @@ namespace SystemDot.Web.Razor.MaterialComponents.TagHelpers;
 [HtmlTargetElement("mdc-app-bar")]
 public class MdcAppBarTagHelper : TagHelper
 {
-    public required string Id { get; set; }
+    public string Id { get; set; }
     public string? Title { get; set; }
     public bool MenuButton { get; set; }
 
