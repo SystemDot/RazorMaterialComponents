@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Core.Html.Chart.Generation
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Core.Html.Chart.Generation
 {
     using Microsoft.AspNetCore.Html;
     using Microsoft.AspNetCore.Mvc.Rendering;

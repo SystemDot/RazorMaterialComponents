@@ -1,8 +1,9 @@
-using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
-using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Fields;
-using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Login;
-using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Options;
-using SystemDot.Web.Razor.MaterialCompontents.Examples.Pipeline.Charts;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Chips;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Fields;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Login;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Options;
+using SystemDot.Web.Razor.MaterialComponents.Examples.Pipeline.Charts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services
 
 builder.Services.AddSingleton<FieldModelCache>();
 builder.Services.AddSingleton<OptionsModelCache>();
+builder.Services.AddSingleton<ChipModelCache>();
 
 builder.Services
     .AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetChartsViewDataRequestHandler>());

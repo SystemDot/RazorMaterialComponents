@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Views.Shared;
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Views.Shared;
 
 public record MenuItem
 {

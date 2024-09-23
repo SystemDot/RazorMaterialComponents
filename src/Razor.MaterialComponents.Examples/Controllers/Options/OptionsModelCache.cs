@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Options
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Options
 {
     public class OptionsModelCache
     {

@@ -1,32 +1,32 @@
-﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Options
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Chips
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     [Authorize]
-    public class Options : Controller
+    public class Chips : Controller
     {
-        private readonly OptionsModelCache cache;
+        private readonly ChipModelCache cache;
 
-        public Options(OptionsModelCache cache)
+        public Chips(ChipModelCache cache)
         {
             this.cache = cache;
         }
 
         public IActionResult Index()
         {
-            OptionsModel model = cache.Get() ?? new OptionsModel();
+            ChipsModel model = cache.Get() ?? new ChipsModel();
 
             model = model with
             {
-                ControllerName = nameof(Options)
+                ControllerName = nameof(Chips)
             };
 
             return base.View(model);
         }
 
         [HttpPost]
-        public IActionResult Index(OptionsModel model)
+        public IActionResult Index(ChipsModel model)
         {
             cache.Set(model); 
             return RedirectToAction();

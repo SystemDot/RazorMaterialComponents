@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Charts
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Charts
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
     public record ChartsModel : MenuModel

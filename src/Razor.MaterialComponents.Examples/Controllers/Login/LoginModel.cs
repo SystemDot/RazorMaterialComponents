@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Login
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Login
 {
     public record LoginModel
     {

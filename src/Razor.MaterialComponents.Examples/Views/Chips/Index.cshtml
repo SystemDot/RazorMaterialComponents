@@ -1,0 +1,37 @@
+﻿@model ChipsModel
+<mdc-grid>
+    <mdc-grid-inner>
+        <mdc-grid-cell span=12>
+            <span class="mdc-chip-set mdc-chip-set--input" role="grid">
+                <span class="mdc-evolution-chip-set__chips" role="presentation">
+                    <div class="mdc-chip" role="row">
+                        <div class="mdc-chip__ripple"></div>
+                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+                        <span role="gridcell">
+                            <span role="button" class="mdc-chip__text">Profile</span>
+                        </span>
+                    </div>
+
+                    <!-- Chip 2 -->
+                    <div class="mdc-chip" role="row">
+                        <div class="mdc-chip__ripple"></div>
+                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">favorite</i>
+                        <span role="gridcell">
+                            <span role="button" class="mdc-chip__text">Favorite</span>
+                        </span>
+                    </div>
+
+                    <!-- Chip 3 -->
+                    <div class="mdc-chip mdc-chip--selected" role="row">
+                        <div class="mdc-chip__ripple"></div>
+                        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">tag</i>
+                        <span role="gridcell">
+                            <span role="button" class="mdc-chip__text">Tag</span>
+                        </span>
+                        <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="0" role="button" aria-hidden="true">close</i>
+                    </div>
+                </span>
+            </span>
+        </mdc-grid-cell>
+    </mdc-grid-inner>
+</mdc-grid>

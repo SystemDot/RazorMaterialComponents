@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions
 {
     public record Colour
     {

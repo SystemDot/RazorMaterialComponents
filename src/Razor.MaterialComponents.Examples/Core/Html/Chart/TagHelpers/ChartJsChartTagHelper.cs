@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Core.Html.Chart.TagHelpers
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Core.Html.Chart.TagHelpers
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Core.Html.Chart.Generation;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Core.Html.Chart.Generation;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.TagHelpers;
     using Microsoft.AspNetCore.Razor.TagHelpers;

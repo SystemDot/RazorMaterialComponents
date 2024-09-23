@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Login
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Login
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

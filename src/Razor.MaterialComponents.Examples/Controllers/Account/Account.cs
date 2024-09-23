@@ -1,10 +1,10 @@
 ﻿
-namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Account
+namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Account
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Authorization;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
     using Microsoft.AspNetCore.Authentication;
 
     [Authorize]

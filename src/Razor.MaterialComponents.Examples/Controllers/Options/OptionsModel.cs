@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Options
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Options
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
 
     public record OptionsModel : MenuModel
     {

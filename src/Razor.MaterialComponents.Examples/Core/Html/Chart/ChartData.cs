@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Core.Html.Chart
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Core.Html.Chart
 {
     public record ChartData
     {

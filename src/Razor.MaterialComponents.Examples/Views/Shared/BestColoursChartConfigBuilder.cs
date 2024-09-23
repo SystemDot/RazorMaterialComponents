@@ -1,6 +1,6 @@
 ﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Views.Shared
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Core.Html.Chart;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Core.Html.Chart;
 
     public static class BestColoursChartConfigBuilder
     {

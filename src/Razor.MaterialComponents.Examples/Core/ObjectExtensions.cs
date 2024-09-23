@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Core
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Core
 {
     using System.Text.Json;
 

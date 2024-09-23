@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.MaterialComponents", "Razor.MaterialComponents\Razor.MaterialComponents.csproj", "{361C039E-3371-41B2-9ADF-9AD4ECB43808}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.MaterialCompontents.Examples", "Razor.MaterialComponents.Examples\Razor.MaterialCompontents.Examples.csproj", "{C79D96AE-8119-4568-B09C-04A3C8047FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.MaterialComponents.Examples", "Razor.MaterialComponents.Examples\Razor.MaterialComponents.Examples.csproj", "{C79D96AE-8119-4568-B09C-04A3C8047FA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

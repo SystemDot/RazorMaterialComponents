@@ -1,4 +1,4 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Fields
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Fields
 {
     public class FieldModelCache
     {

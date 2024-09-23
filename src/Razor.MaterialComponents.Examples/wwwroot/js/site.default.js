@@ -41,6 +41,12 @@ function hookup_mdc_banners() {
         banner.open();
     }
 }
+function hookup_mdc_chipsets() {
+    const chipsets = document.querySelectorAll('.mdc-evolution-chip-set');
+    for (const chipset of chipsets) {
+        mdc.chips.MDCChipSet.attachTo(chipset);
+    }
+}
 
 function hookup_mdc_switches() {
     const switches = document.querySelectorAll('.mdc-switch');
@@ -88,6 +94,7 @@ function hookup() {
     hookup_charts();
     hookup_mdc_appbar_drawer();
     hookup_mdc_banners();
+    hookup_mdc_chipsets();
     hookup_mdc_switches();
     hookup_mdc_buttons();
     hookup_mdc_tables();

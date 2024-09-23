@@ -1,6 +1,6 @@
-﻿using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+﻿using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
 
-namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Buttons
+namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Buttons
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

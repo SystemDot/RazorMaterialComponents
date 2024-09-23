@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Tabs
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Tabs
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
 
     public record TabsModel : MenuModel
     {

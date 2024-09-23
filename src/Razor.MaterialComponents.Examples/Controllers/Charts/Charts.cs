@@ -1,7 +1,7 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Charts
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Charts
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Messages.Charts;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Messages.Charts;
     using MediatR;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

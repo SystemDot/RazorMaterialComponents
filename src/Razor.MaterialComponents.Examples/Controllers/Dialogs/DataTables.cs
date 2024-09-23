@@ -1,8 +1,8 @@
-﻿using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+﻿using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Dialogs
+namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Dialogs
 {
     [Authorize]
     public class Dialogs : Controller

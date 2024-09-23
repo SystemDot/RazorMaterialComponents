@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Fields
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Fields
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
     public record FieldsModel : MenuModel

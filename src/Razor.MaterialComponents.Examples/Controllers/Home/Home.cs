@@ -1,9 +1,9 @@
 ﻿
-namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Home
+namespace SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Home
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Authorization;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Controllers.Shared;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Controllers.Shared;
 
     [Authorize]
     public class Home : Controller

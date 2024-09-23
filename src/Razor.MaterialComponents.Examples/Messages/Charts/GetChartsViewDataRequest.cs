@@ -1,6 +1,6 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Messages.Charts
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Messages.Charts
 {
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
     using MediatR;
 
     public record GetChartsViewDataRequest : IRequest<GetChartsViewDataResponse>

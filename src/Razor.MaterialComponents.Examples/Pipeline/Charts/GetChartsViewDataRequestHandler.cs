@@ -1,10 +1,10 @@
-﻿namespace SystemDot.Web.Razor.MaterialCompontents.Examples.Pipeline.Charts
+﻿namespace SystemDot.Web.Razor.MaterialComponents.Examples.Pipeline.Charts
 {
     using MediatR;
     using System.Threading;
     using System.Threading.Tasks;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Messages.Charts;
-    using SystemDot.Web.Razor.MaterialCompontents.Examples.Abstractions;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Messages.Charts;
+    using SystemDot.Web.Razor.MaterialComponents.Examples.Abstractions;
 
     public class GetChartsViewDataRequestHandler : IRequestHandler<GetChartsViewDataRequest, GetChartsViewDataResponse>
     {
